@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import Card from "./components/Card";
 import Header from './components/Header';
+import Search from './containers/Search'
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,10 +14,10 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
+        {/* <Header /> */}
         <Switch>
-          <Route>
-            
+          <Route path="/">
+            <Search/>
           </Route>
         </Switch>
       </Router>
