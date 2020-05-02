@@ -5,8 +5,8 @@ import SearchForm from '../../components/SearchForm';
 
 class Search extends Component{
     state = {
-        books: ["booksTesting"],
-        search: "searchTesting",
+        books: [],
+        search: "",
         results: [],
     }
 
@@ -14,17 +14,34 @@ class Search extends Component{
 
     }
     
-    searchBooks=query => {}
+    searchBooks=query => {
+        console.log("query worked!",query);
+        API.search(query)
+        .then(res => {
+            console.log(".then worked!");
+            this.setState({books: res.data.items});
+            console.log("data worked", this.state);
+        })
+        .catch(err => console.log(err))
+    }
 
-    handleInputChange=event => {}
+    handleInputChange=event => {
+        this.setState({search: event.target.value})
+    }
 
-    handleFormSubmit=event => {}
+    handleFormSubmit=event => {
+        event.preventDefault();
+        this.searchBooks(this.state.search);
+    }
 
     render(){
         return (
             <div>
                 <h1>Search for book.</h1>
-                <SearchForm />
+                <SearchForm 
+                handleFormSubmit={this.handleFormSubmit}
+                handleInputChange={this.handleInputChange}
+                />
             </div>
         )
     };
