@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import API from '../../utils/API';
+import Card from '../Card';
 
 class BookList extends Component {
     state = {};
@@ -21,8 +22,11 @@ class BookList extends Component {
     render(){
         return (
             <div className="book">
-                {this.props.books.map((index, item) => 
-                <Card />
+                {this.props.books.map((items, index) => 
+                <Card key={index} title={items.volumeInfo.title} author={items.volumeInfo.author}
+                image={items.volumeInfo.imageLinks.thumbnail} description={items.volumeInfo.description}  
+                onClick={() => this.clickSearch(index)}
+                />
                 )}
             </div>
         )

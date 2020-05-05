@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import API from '../../utils/API';
 import SearchForm from '../../components/SearchForm';
+import BookList from '../../components/BookList';
 
 
 class Search extends Component{
@@ -42,6 +43,7 @@ class Search extends Component{
                 handleFormSubmit={this.handleFormSubmit}
                 handleInputChange={this.handleInputChange}
                 />
+                <BookList books={this.state.books} />
             </div>
         )
     };

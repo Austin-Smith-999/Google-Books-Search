@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import Card from "./components/Card";
 import Header from './components/Header';
+// import Card from './components/Card'
 import Search from './containers/Search'
 import {
   BrowserRouter as Router,
