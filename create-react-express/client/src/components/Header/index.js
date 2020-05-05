@@ -5,14 +5,15 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import "./style.css";
 
 function Header(props) {
     return(
     <div className="header">
-            <ul>
-                <li><Link to= "/">Search</Link></li>
-                <li><Link to= "/saved">Saved</Link></li>
-            </ul>
+            
+            <Link to= "/">Search</Link>
+            <Link to= "/saved">Saved</Link>
+            
         </div>
     );
 }
