@@ -9,14 +9,15 @@ class BookList extends Component {
         console.log("index worked", index);
         console.log(this.props.books);
         var path = this.props.books[index].volumeInfo;
-        API.saveBook({
+        API.saveBooks({
             title:path.title,
             author:path.authors,
             description:path.description,
             image:path.imageLinks.thumbnail,
             infoLink:path.infoLink
         })
-        .then(res => console.log("book saved", res)) 
+        .then(res => console.log("book saved", res))
+        .then(alert("saved works")) 
     }
     
     render(){
