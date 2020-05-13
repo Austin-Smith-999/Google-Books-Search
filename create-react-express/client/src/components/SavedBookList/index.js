@@ -9,11 +9,11 @@ class SavedBookList extends Component{
         return(
             <div>
                 <h1>reading list</h1>
-                <div className="bookClass">
-                {this.props.books.map((items, index) => 
-                <Card key={index} title={items.volumeInfo.title} author={items.volumeInfo.author}
-                image={items.volumeInfo.imageLinks.thumbnail} description={items.volumeInfo.description}  
-                onClick={() => this.clickSearch(index)}
+                <div className="book-something">
+                {this.props.books.map((item, index) => 
+                <Card title={item.title} author={item.authors}
+                image={item.img} description={item.description}  
+                link={item.link}
                 />
                 )}    
                 </div>

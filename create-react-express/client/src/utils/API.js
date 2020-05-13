@@ -8,10 +8,11 @@ export default{
     return axios.get(ApiUrl + query);    
     },
     getBooks: function () {
-        return axios.get("/api/save")
+        return axios.get("/api/books")
     },
     saveBooks: function (bookInfo) {
-        return axios.post("/api/save", bookInfo);
+        console.log("save books function working!!");
+        return axios.post("/api/books", bookInfo);
     }
 }
 
