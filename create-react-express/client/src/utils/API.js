@@ -3,7 +3,7 @@ import axios from "axios";
 
 const ApiUrl = "https://www.googleapis.com/books/v1/volumes?q=";
 
-export default{
+export default {
     search: function (query) {
     return axios.get(ApiUrl + query);    
     },

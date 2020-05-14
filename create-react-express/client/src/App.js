@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Header from './components/Header';
 // import Card from './components/Card'
 import Search from './containers/Search';
-import Saved from './containers/Search/Saved';
+import Saved from './containers/Saved';
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,7 +12,8 @@ import {
 } from "react-router-dom";
 import "./App.css";
 
-function App() {
+class App extends Component{
+render() {
   return (
     <div className="App">
               <Router>
@@ -32,6 +33,6 @@ function App() {
 
   );
 }
-
+}
 
 export default App;

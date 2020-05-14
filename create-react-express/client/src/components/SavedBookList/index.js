@@ -8,18 +8,18 @@ class SavedBookList extends Component{
     render() {
         return(
             <div>
-                <h1>reading list</h1>
-                <div className="book-something">
-                {this.props.books.map((item, index) => 
-                <Card title={item.title} author={item.authors}
-                image={item.img} description={item.description}  
-                link={item.link}
-                />
-                )}    
-                </div>
+    
+            <h1>Reading List</h1>
+    
+            <div  className="book-something" >
+            {this.props.books.map((item, index) => 
+            <Card key={index} title={item.title} author={item.authors} link={item.link} image={item.img} summary={item.description} />)}
             </div>
-        )
-    }
+           
+    
+          </div>
+            )
+        }
 }
 
 

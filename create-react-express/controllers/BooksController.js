@@ -16,7 +16,7 @@ module.exports = {
         console.log("I hit the create function");
         let book = req.body;
         book.title = req.body.title;
-        book.authors = req.body.authors;
+        book.authors = req.body.author;
         book.description = req.body.description;
         book.img = req.body.img;
         book.link = req.body.link;

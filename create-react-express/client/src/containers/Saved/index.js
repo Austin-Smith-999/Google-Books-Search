@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import SavedBookList from '../../../components/SavedBookList';
-import API from '../../../utils/API';
+import SavedBookList from '../../components/SavedBookList';
+import API from '../../utils/API';
 
 class Saved extends Component{
     state = {

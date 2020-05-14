@@ -3,7 +3,7 @@
 const router = require("express").Router();
 const booksController = require("../../controllers/BooksController");
 
-router.route("/save")
+router.route("/")
 .get(booksController.findAll)
 .post(booksController.create)
 

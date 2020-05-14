@@ -3,7 +3,9 @@ import API from '../../utils/API';
 import Card from '../Card';
 
 class BookList extends Component {
-    state = {};
+    state = {
+
+    };
 
     clickSearch(index) {
         console.log("index worked", index);
@@ -17,15 +19,15 @@ class BookList extends Component {
             infoLink:path.infoLink
         })
         .then(res => console.log("book saved", res))
-        .then(alert("saved works")) 
+        .then(alert("This book is saved"));
     }
     
     render(){
         return (
-            <div className="book">
-                {this.props.books.map((items, index) => 
-                <Card key={index} title={items.volumeInfo.title} author={items.volumeInfo.author}
-                image={items.volumeInfo.imageLinks.thumbnail} description={items.volumeInfo.description}  
+            <div className="book-something">
+                {this.props.books.map((item, index) => 
+                <Card key={index} title={item.volumeInfo.title} author={item.volumeInfo.author}
+                image={item.volumeInfo.imageLinks.thumbnail} description={item.volumeInfo.description}  
                 onClick={() => this.clickSearch(index)}
                 />
                 )}
