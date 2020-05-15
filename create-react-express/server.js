@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Define API routes here
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/googleBooks";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://user:shreksSwamp69@ds029821.mlab.com:29821/heroku_85rs0kd1";
 mongoose.connect(MONGODB_URI)
 .then(() => {
   console.log("mongoose.connect works!!");
